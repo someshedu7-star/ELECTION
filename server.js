@@ -1,6 +1,8 @@
-app.get("/", (req, res) => {
-  res.send("Backend is running 🚀");
-});
+const pathname = requestUrl.pathname;
+if (pathname === "/") {
+  sendText(req, res, 200, "Backend is running 🚀");
+  return;
+}
 
 const http = require('http');
 const fs = require('fs');
