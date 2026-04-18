@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vote Admin | Somesh Bali Campaign</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+  <main class="admin-shell">
+    <section class="admin-card login-card" id="login-card">
+      <p class="eyebrow">Somesh Campaign Admin</p>
+      <h1>Vote Viewer</h1>
+      <p class="intro">Enter the admin password to view who confirmed their vote for Somesh Bali.</p>
+
+      <form id="login-form" class="admin-form">
+        <label>
+          <span>Password</span>
+          <input type="password" name="password" placeholder="Enter admin password" required>
+        </label>
+        <button type="submit">Open Admin Panel</button>
+        <p class="status" id="login-status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="admin-card hidden" id="dashboard">
+      <div class="dashboard-head">
+        <div>
+          <p class="eyebrow">Protected Panel</p>
+          <h2>Recorded Votes</h2>
+        </div>
+        <div class="dashboard-actions">
+          <a href="./index.html">Back to Campaign</a>
+          <button type="button" id="logout-button">Logout</button>
+        </div>
+      </div>
+
+      <p class="summary" id="vote-summary">Loading votes...</p>
+      <div class="vote-list" id="vote-list"></div>
+    </section>
+  </main>
+
+  <script src="./admin.js"></script>
+</body>
+</html>
