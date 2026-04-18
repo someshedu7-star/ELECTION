@@ -1,9 +1,14 @@
-const pathname = requestUrl.pathname;
-if (pathname === "/") {
-  sendText(req, res, 200, "Backend is running 🚀");
-  return;
-}
+const server = http.createServer(async (req, res) => {
+  const requestUrl = new URL(req.url, `http://${req.headers.host}`);
+  const pathname = requestUrl.pathname;
 
+  // ✅ CORRECT PLACE
+  if (pathname === "/") {
+    sendText(req, res, 200, "Backend is running 🚀");
+    return;
+  }
+
+  if (req.method === 'OPTIONS') {
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
