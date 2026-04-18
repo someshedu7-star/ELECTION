@@ -1,3 +1,7 @@
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
