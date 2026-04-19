@@ -4,187 +4,98 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>सोमेश बळी को वोट दें | IGNIS हाउस कैप्टन 2026-27</title>
-  <meta
-    name="description"
-    content="सोमेश बळी के IGNIS हाउस कैप्टन पद के लिए प्रचार वेबसाइट, पोदार इंटरनेशनल स्कूल वाशिम, स्टूडेंट्स काउंसिल 2026-27."
-  >
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- ✅ SAME CSS -->
   <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-<link rel="stylesheet" href="assets/style.css">
-<script src="assets/script.js"></script>
 
-<img src="assets/images/somesh-campaign-poster.png">
-<img src="assets/images/podar-logo.png">
+<body>
+
 <script>
 const targetDate = new Date("2026-04-23T00:00:00").getTime();
 function updateCountdown() {
   const now = new Date().getTime();
   const diff = targetDate - now;
 
-  if (diff <= 0) {
-    document.getElementById("days").innerText = "00";
-    document.getElementById("hours").innerText = "00";
-    document.getElementById("minutes").innerText = "00";
-    document.getElementById("seconds").innerText = "00";
-    return;
-  }
+  if (diff <= 0) return;
 
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
+  document.getElementById("days").innerText =
+    String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, "0");
 
-  document.getElementById("days").innerText = String(days).padStart(2, "0");
-  document.getElementById("hours").innerText = String(hours).padStart(2, "0");
-  document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
-  document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
+  document.getElementById("hours").innerText =
+    String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, "0");
+
+  document.getElementById("minutes").innerText =
+    String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, "0");
+
+  document.getElementById("seconds").innerText =
+    String(Math.floor((diff / 1000) % 60)).padStart(2, "0");
 }
 setInterval(updateCountdown, 1000);
-updateCountdown();
 </script>
 
+<div class="fire-glow">
+  <span></span><span></span><span></span><span></span>
+</div>
+
 <div class="page-shell">
+
 <header class="masthead">
-<button class="language-switch" id="language-toggle" type="button">अंग्रेज़ी | हिंदी | मराठी</button>
 
-<div class="school-brand">
-<img src="podar-logo.png" style="width:180px;">
-<div>
-<p>1927 से उत्कृष्टता की विरासत</p>
-<p>पोदार इंटरनेशनल स्कूल वाशिम</p>
-</div>
-</div>
+  <!-- ✅ Language Buttons -->
+  <div class="language-switch">
+    <a href="index.html" class="lang-btn">English</a>
+    <a href="hindex.html" class="lang-btn">हिंदी</a>
+    <a href="mindex.html" class="lang-btn">मराठी</a>
+  </div>
 
-<p>स्टूडेंट्स काउंसिल 2026-27 | IGNIS हाउस कैप्टन अभियान</p>
+  <!-- ✅ KEEP SAME IMAGE PATH -->
+  <div class="school-brand">
+    <img src="podar-logo.png" style="width:180px;">
+    <div>
+      <p>1927 से उत्कृष्टता की विरासत</p>
+      <p>पोदार इंटरनेशनल स्कूल वाशिम</p>
+    </div>
+  </div>
+
+  <p>स्टूडेंट्स काउंसिल 2026-27 | IGNIS हाउस कैप्टन अभियान</p>
 </header>
 
 <main>
-<section class="hero">
-<div class="panel hero-copy">
 
+<section class="hero">
+
+<div class="panel hero-copy">
 <span>ऊर्जा और उद्देश्य के साथ नेतृत्व के लिए वोट दें</span>
+
 <h1>सोमेश बळी IGNIS हाउस कैप्टन के लिए</h1>
+
 <p>कक्षा 9 रोज | स्टूडेंट्स काउंसिल चुनाव 2026-27</p>
 
 <p>
-मैं सोमेश बळी हूँ और मैं <strong>IGNIS हाउस कैप्टन</strong> पद के लिए खड़ा हूँ।
-मैं हमारे हाउस में अधिक उत्साह, बेहतर टीमवर्क और हर छात्र की आवाज़ को आत्मविश्वास से सामने लाने वाला नेतृत्व लाना चाहता हूँ।
+मैं सोमेश बळी हूँ और IGNIS हाउस कैप्टन पद के लिए खड़ा हूँ।
+मैं उत्साह, टीमवर्क और हर छात्र की आवाज़ को मजबूत बनाना चाहता हूँ।
 </p>
 
-<div>
-<span>जोश के साथ नेतृत्व</span>
-<span>IGNIS के साथ आगे बढ़ें</span>
-<span>आपकी आवाज़, हमारा हाउस</span>
 </div>
 
-<div class="countdown-shell">
-<p>चुनाव दिवस - 23/04/2026 तक की उलटी गिनती</p>
+<!-- ✅ THIS WAS MISSING PROPERLY -->
+<aside class="panel poster-card">
+  <img src="somesh-campaign-poster.png">
+</aside>
 
-<div>
-<div>
-<span id="days">00</span>
-<span>दिन</span>
-</div>
-<div>
-<span id="hours">00</span>
-<span>घंटे</span>
-</div>
-<div>
-<span id="minutes">00</span>
-<span>मिनट</span>
-</div>
-<div>
-<span id="seconds">00</span>
-<span>सेकंड</span>
-</div>
-</div>
-
-<p>
-हर सेकंड हमें याद दिलाता है कि नेतृत्व का दिन करीब है।
-आइए IGNIS को एकता, ऊर्जा और आत्मविश्वास के साथ आगे बढ़ाएं।
-</p>
-</div>
-
-<div>
-<a href="#goals">मेरे लक्ष्य देखें</a>
-<a href="#vote">मुझे क्यों वोट दें</a>
-</div>
-
-</div>
-</section>
-
-<section id="vote">
-<h2>मुझे ही क्यों चुनें?</h2>
-<p>
-नेतृत्व केवल आगे खड़े होने का नाम नहीं है।
-यह अवसर बनाने, विश्वास बनाने और हर छात्र को शामिल महसूस कराने के बारे में है।
-</p>
-
-<div>
-<h3>ऊर्जावान नेतृत्व</h3>
-<p>मैं हर प्रतियोगिता और कार्यक्रम में उत्साह लाऊंगा।</p>
-
-<h3>छात्र प्रतिनिधित्व</h3>
-<p>मैं सभी छात्रों की बात सुनूंगा।</p>
-
-<h3>मजबूत टीमवर्क</h3>
-<p>हमारे हाउस को एकजुट और प्रेरित बनाऊंगा।</p>
-</div>
-</section>
-
-<section id="goals">
-<h2>मेरे लक्ष्य</h2>
-
-<div>
-<h3>अधिक भागीदारी</h3>
-<p>ज्यादा छात्रों को शामिल करना।</p>
-
-<h3>बेहतर योजना</h3>
-<p>प्रतियोगिताओं के लिए अच्छी तैयारी।</p>
-
-<h3>छात्रों के विचार</h3>
-<p>हर किसी की राय को महत्व देना।</p>
-
-<h3>सकारात्मक पहचान</h3>
-<p>IGNIS को आदर्श बनाना।</p>
-</div>
-</section>
-
-<section>
-<h2>अभियान भावना</h2>
-<p>समर्पित। जिम्मेदार। मित्रवत। निडर।</p>
-
-<div>
-<h3>मेरा वादा</h3>
-<p>मैं सम्मान और ईमानदारी के साथ नेतृत्व करूंगा।</p>
-
-<h3>मेरा नारा</h3>
-<p><strong>"साथ मिलकर जलें। साथ मिलकर चमकें। साथ मिलकर जीतें।"</strong></p>
-</div>
-</section>
-
-<section id="final-call">
-<h1>सोमेश बळी को वोट दें</h1>
-<p>IGNIS हाउस कैप्टन के लिए</p>
-
-<p>
-आपका एक वोट सही नेता चुन सकता है।<br><br>
-आइए अपनी स्कूल को गर्व महसूस कराएं और IGNIS हाउस को आगे बढ़ाएं।<br><br>
-स्टूडेंट्स काउंसिल 2026-27<br>
-सही चुनाव करें। सोमेश बळी को चुनें।
-</p>
 </section>
 
 </main>
 
-<p>सोमेश बळी अभियान वेबसाइट</p>
-
 </div>
 
+<!-- ✅ SAME SCRIPT -->
 <script src="./script.js"></script>
+
 </body>
 </html>
