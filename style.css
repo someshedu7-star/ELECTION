@@ -1,3 +1,21 @@
+.language-switch {
+  display: flex;
+  gap: 10px;
+}
+
+.lang-btn {
+  text-decoration: none;
+  padding: 8px 14px;
+  background: #ff4d00;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.lang-btn:hover {
+  background: #cc3d00;
+}
 :root {
   --ink: #0f172a;
   --paper: #fef6e4;
