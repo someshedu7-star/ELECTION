@@ -4,219 +4,137 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vote Somesh Bali | IGNIS House Captain 2026-27</title>
-  <meta
-    name="description"
-    content="Promotional campaign website for Somesh Bali, candidate for IGNIS House Captain at Podar International School Washim, Students Council 2026-27."
-  >
+
+  <meta name="description"
+    content="Promotional campaign website for Somesh Bali, candidate for IGNIS House Captain at Podar International School Washim, Students Council 2026-27.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-  <script>
-const targetDate = new Date("2026-04-23T00:00:00").getTime();
 
-function updateCountdown() {
-  const now = new Date().getTime();
-  const diff = targetDate - now;
+<!-- FIRE BACKGROUND -->
+<div class="fire-glow">
+  <span></span><span></span><span></span><span></span>
+</div>
 
-  if (diff <= 0) {
-    document.getElementById("days").innerText = "00";
-    document.getElementById("hours").innerText = "00";
-    document.getElementById("minutes").innerText = "00";
-    document.getElementById("seconds").innerText = "00";
-    return;
-  }
+<div class="page-shell">
 
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
+<!-- HEADER -->
+<header class="masthead">
 
-  document.getElementById("days").innerText = String(days).padStart(2, "0");
-  document.getElementById("hours").innerText = String(hours).padStart(2, "0");
-  document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
-  document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
-}
-
-setInterval(updateCountdown, 1000);
-updateCountdown();
-</script>
-  <div class="fire-glow" aria-hidden="true">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+  <!-- ✅ LANGUAGE BUTTONS (JS CONTROLLED) -->
+  <div class="language-switch">
+    <button class="lang-btn" onclick="setLanguage('en')">English</button>
+    <button class="lang-btn" onclick="setLanguage('hi')">हिंदी</button>
+    <button class="lang-btn" onclick="setLanguage('mr')">मराठी</button>
   </div>
 
-  <div class="page-shell">
-    <header class="masthead">
-      <div class="language-switch">
-  <a href="index.html" class="lang-btn">English</a>
-  <a href="hindex.html" class="lang-btn">हिंदी</a>
-  <a href="mindex.html" class="lang-btn">मराठी</a>
-</div>
-      <div class="school-brand">
-        <img src="podar-logo.png" alt="Podar school logo" style="width:180px; height:auto;">
-       
+  <div class="school-brand">
+    <img src="podar-logo.png" style="width:180px;">
+    <div>
+      <p data-i18n="schoolTag">Since 1927 Legacy of Excellence</p>
+      <p data-i18n="schoolName">PODAR INTERNATIONAL SCHOOL WASHIM</p>
+    </div>
+  </div>
+
+  <p data-i18n="electionTag">Students Council 2026-27 | IGNIS House Captain Campaign</p>
+
+</header>
+
+<!-- MAIN -->
+<main>
+
+<section class="hero">
+  <div class="panel hero-copy">
+
+    <span data-i18n="kicker">Vote for leadership with energy and purpose</span>
+
+    <h1 data-i18n="heroTitle">Somesh Bali for IGNIS House Captain</h1>
+
+    <p data-i18n="candidateLine">Grade 9 Rose | Students Council Election 2026-27</p>
+
+    <p data-i18n="lead"></p>
+
+    <div class="slogan-row">
+      <span class="badge" data-i18n="badge1"></span>
+      <span class="badge" data-i18n="badge2"></span>
+      <span class="badge" data-i18n="badge3"></span>
+    </div>
+
+    <!-- COUNTDOWN -->
+    <div class="countdown-shell">
+      <p data-i18n="countdownLabel"></p>
+
+      <div class="countdown-grid">
         <div>
-          <p class="school-tag" data-i18n="schoolTag">Since 1927 Legacy of Excellence</p>
-          <p class="school-name" data-i18n="schoolName">PODAR INTERNATIONAL SCHOOL WASHIM</p>
+          <span id="days">00</span>
+          <span data-i18n="daysLabel"></span>
+        </div>
+        <div>
+          <span id="hours">00</span>
+          <span data-i18n="hoursLabel"></span>
+        </div>
+        <div>
+          <span id="minutes">00</span>
+          <span data-i18n="minutesLabel"></span>
+        </div>
+        <div>
+          <span id="seconds">00</span>
+          <span data-i18n="secondsLabel"></span>
         </div>
       </div>
 
-      <p class="election-tag" data-i18n="electionTag">Students Council 2026-27 | IGNIS House Captain Campaign</p>
-    </header>
+      <p id="countdown-note" data-i18n="countdownNote"></p>
+    </div>
 
-    <main>
-      <section class="hero">
-        <div class="panel hero-copy">
-          <span class="kicker" data-i18n="kicker">Vote for leadership with energy and purpose</span>
-          <h1 data-i18n="heroTitle">Somesh Bali for IGNIS House Captain</h1>
-          <p class="candidate-line" data-i18n="candidateLine">Grade 9 Rose | Students Council Election 2026-27</p>
-          <p class="lead" data-i18n="lead">I'm Somesh Bali, and I'm standing for the post of <strong>IGNIS House Captain</strong>. I want to bring more house spirit, stronger teamwork, and a positive voice that represents every student with confidence.</p>
+    <div>
+      <a href="#goals" data-i18n="ctaGoals"></a>
+      <a href="#vote" data-i18n="ctaWhyVote"></a>
+    </div>
 
-          <div class="slogan-row">
-            <span class="badge" data-i18n="badge1">Lead With Fire</span>
-            <span class="badge" data-i18n="badge2">Rise With IGNIS</span>
-            <span class="badge" data-i18n="badge3">Your Voice, Our House</span>
-          </div>
-        
-
-          <div class="countdown-shell">
-            <div class="countdown-card">
-              <p class="countdown-label" data-i18n="countdownLabel">Countdown to Election Day - 23/04/2026</p>
-              <div class="countdown-grid">
-                <div class="time-box">
-                  <span class="time-value" id="days">00</span>
-                  <span class="time-label" data-i18n="daysLabel">Days</span>
-                </div>
-                <div class="time-box">
-                  <span class="time-value" id="hours">00</span>
-                  <span class="time-label" data-i18n="hoursLabel">Hours</span>
-                </div>
-                <div class="time-box">
-                  <span class="time-value" id="minutes">00</span>
-                  <span class="time-label" data-i18n="minutesLabel">Minutes</span>
-                </div>
-                <div class="time-box">
-                  <span class="time-value" id="seconds">00</span>
-                  <span class="time-label" data-i18n="secondsLabel">Seconds</span>
-                </div>
-              </div>
-            </div>
-
-            <p class="countdown-note" id="countdown-note" data-i18n="countdownNote">Every second is a reminder that leadership day is near. Let IGNIS step forward with unity, energy, and confidence.</p>
-          </div>
-
-          <div class="hero-actions">
-            <a class="button primary" href="#goals" data-i18n="ctaGoals">See My Goals</a>
-            <a class="button secondary" href="#vote" data-i18n="ctaWhyVote">Why Vote for Me</a>
-          </div>
-        </div>
-
-        <aside class="panel poster-card">
-          <img src="somesh-campaign-poster.png" alt="Campaign poster for Somesh Bali, candidate for IGNIS House Captain">
-          <p class="poster-note" data-i18n="posterNote">Official campaign poster supporting the IGNIS House Captain journey.</p>
-        </aside>
-      </section>
-
-      <section class="panel section" id="vote">
-        <div class="section-head">
-          <div>
-            <p data-i18n="whyMeLabel">Why Me</p>
-            <h2 data-i18n="whyMeTitle">A captain who listens, leads, and lifts the whole house</h2>
-          </div>
-          <p class="mini-copy" data-i18n="whyMeCopy">Leadership is not only about being in front. It is about creating opportunities, building trust, and making every student feel included.</p>
-        </div>
-
-        <div class="grid promise-grid">
-          <article class="card">
-            <div class="number">1</div>
-            <h3 data-i18n="promise1Title">Energetic Leadership</h3>
-            <p data-i18n="promise1Copy">I will bring enthusiasm to competitions, assemblies, and every house activity so IGNIS always shows up with spirit.</p>
-          </article>
-          <article class="card">
-            <div class="number">2</div>
-            <h3 data-i18n="promise2Title">Student Representation</h3>
-            <p data-i18n="promise2Copy">I will listen to ideas from juniors and seniors alike, so our house decisions reflect what students truly want.</p>
-          </article>
-          <article class="card">
-            <div class="number">3</div>
-            <h3 data-i18n="promise3Title">Strong Team Culture</h3>
-            <p data-i18n="promise3Copy">I want IGNIS to be known for teamwork, encouragement, and discipline, where everyone feels motivated to participate.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="panel section" id="goals">
-        <div class="section-head">
-          <div>
-            <p data-i18n="goalsLabel">My Goals</p>
-            <h2 data-i18n="goalsTitle">What I will work on if elected</h2>
-          </div>
-          <p class="mini-copy" data-i18n="goalsCopy">These goals are simple, practical, and focused on making school life more exciting, united, and student-driven.</p>
-        </div>
-
-        <div class="grid goal-grid">
-          <article class="card">
-            <h3 data-i18n="goal1Title">More Participation Across IGNIS</h3>
-            <p data-i18n="goal1Copy">I will encourage more students to join events, take responsibility, and feel proud to represent our house.</p>
-          </article>
-          <article class="card">
-            <h3 data-i18n="goal2Title">Better Team Coordination</h3>
-            <p data-i18n="goal2Copy">I want clearer planning before competitions so our house performs with preparation, confidence, and focus.</p>
-          </article>
-          <article class="card">
-            <h3 data-i18n="goal3Title">Student Ideas That Matter</h3>
-            <p data-i18n="goal3Copy">I will support collecting suggestions from students so our activities feel more engaging and connected to what we enjoy.</p>
-          </article>
-          <article class="card">
-            <h3 data-i18n="goal4Title">A Positive House Identity</h3>
-            <p data-i18n="goal4Copy">My aim is to build an IGNIS image that is respectful, competitive, friendly, and remembered for strong sportsmanship.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="panel section">
-        <div class="section-head">
-          <div>
-            <p data-i18n="spiritLabel">Campaign Spirit</p>
-            <h2 data-i18n="spiritTitle">Dedicated. Responsible. Friendly. Fearless.</h2>
-          </div>
-          <p class="mini-copy" data-i18n="spiritCopy">IGNIS stands for fire, and fire means energy, courage, and the will to shine brighter together.</p>
-        </div>
-
-        <div class="grid goal-grid">
-          <article class="card">
-            <h3 data-i18n="promiseTitle">My Promise</h3>
-            <p data-i18n="promiseCopy">I will lead with respect, stay approachable, and give my best effort to make IGNIS House stronger in every opportunity we get.</p>
-          </article>
-          <article class="card">
-            <h3 data-i18n="sloganTitle">My Slogan</h3>
-            <p data-i18n="sloganCopy"><strong>"Together we spark. Together we shine. Together we lead IGNIS to victory."</strong></p>
-          </article>
-        </div>
-      </section>
-
-  
-
-      <section class="split-banner" id="final-call">
-        <div class="big-cta">
-          <p data-i18n="finalVoteLine1">Vote Somesh Bali</p>
-          <p data-i18n="finalVoteLine2">for IGNIS House Captain</p>
-        </div>
-        <div class="cta-copy" data-i18n="finalCopy">
-          Your one vote can help choose a captain who is ready to serve, support, and strengthen our house.<br><br>Let's make <strong>Podar International School Washim</strong> proud and take <strong>IGNIS House</strong> forward with confidence, unity, and energy.<br><br><strong>Students Council 2026-27</strong><br><strong>Choose commitment. Choose spirit. Choose Somesh Bali.</strong>
-        </div>
-      </section>
-    </main>
-
-    <p class="footer-note" data-i18n="footerNote">Campaign website for Somesh Bali | IGNIS House Captain | Podar International School Washim</p>
-    <p class="footer-note"><a class="admin-link" href="./admin.html">Admin Vote Viewer</a></p>
   </div>
 
-  <script src="./script.js"></script>
+  <!-- POSTER (FIXED ISSUE HERE ✅) -->
+  <aside class="panel poster-card">
+    <img src="somesh-campaign-poster.png">
+    <p data-i18n="posterNote"></p>
+  </aside>
+
+</section>
+
+<!-- WHY ME -->
+<section id="vote">
+  <h2 data-i18n="whyMeTitle"></h2>
+  <p data-i18n="whyMeCopy"></p>
+</section>
+
+<!-- GOALS -->
+<section id="goals">
+  <h2 data-i18n="goalsTitle"></h2>
+</section>
+
+<!-- FINAL CTA -->
+<section id="final-call">
+  <h1 data-i18n="finalVoteLine1"></h1>
+  <p data-i18n="finalVoteLine2"></p>
+
+  <p data-i18n="finalCopy"></p>
+</section>
+
+</main>
+
+<p data-i18n="footerNote"></p>
+
+</div>
+
+<!-- SCRIPT -->
+<script src="./script.js"></script>
+
 </body>
 </html>
