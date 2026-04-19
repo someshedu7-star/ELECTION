@@ -1,3 +1,25 @@
+.poster-img {
+  width: 100%;        /* takes full container width */
+  max-width: 500px;   /* increase this to control size */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+} 
+.poster-card {
+  width: 100%;
+  max-width: 550px;   /* increase this */
+}
+.top-logo {
+  width: 80px;     /* increase to 100px or 120px */
+  height: auto;
+}
+.main-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;   /* makes it responsive */
+}
 :root {
   --ink: #0f172a;
   --paper: #fef6e4;
